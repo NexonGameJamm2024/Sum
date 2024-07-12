@@ -1,24 +1,18 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement1 : MonoBehaviour
 {
-    public float maxY;
-    public float minY;
     public float MoveSpeed = 5f;
     public float JumpForce = 10f;
     public LayerMask GroundLayer;
 
+    public static bool isDrag;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private bool isDrag = false;
-    private bool isMaxY = false;
     private Transform tr;
-
-    [SerializeField]
-    private GameObject Wall;
-    [SerializeField]
-    private Transform CreatePosition;
 
     private void Start()
     {
@@ -28,9 +22,12 @@ public class PlayerMovement1 : MonoBehaviour
 
     private void Update()
     {
-        GroundCheck();
-        Move();
-        Jump();
+        if(!isDrag)
+        {
+            GroundCheck();
+            Move();
+            Jump();
+        }
     }
 
     private void Move()
@@ -62,45 +59,6 @@ public class PlayerMovement1 : MonoBehaviour
                     isGrounded = false;
                 }
             }
-        }
-    }
-
-    private void OnMouseDrag()
-    {
-        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float angle = Mathf.Atan2(pos.y - gameObject.transform.position.y, pos.x - gameObject.transform.position.x) * Mathf.Rad2Deg / 2;
-        isDrag = true;
-
-        if (maxY < pos.y)
-        {
-            isMaxY = true;
-            gameObject.transform.position = new Vector2(gameObject.transform.position.x, maxY);
-        }
-        else if (minY > pos.y)
-        {
-            gameObject.transform.position = new Vector2(gameObject.transform.position.x, minY);
-            isMaxY = false;
-        }
-        else
-        {
-            gameObject.transform.position = new Vector2(gameObject.transform.position.x, pos.y);
-            isMaxY = false;
-        }
-
-        Debug.Log(angle);
-
-        if (angle <= 90 && angle >= 0)
-        {
-            gameObject.transform.localEulerAngles = new Vector3(0, 0, angle);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (isMaxY && isDrag)
-        {
-            isDrag = false;
-            GameObject temp = Instantiate(Wall, CreatePosition.position, Quaternion.identity);
         }
     }
 }

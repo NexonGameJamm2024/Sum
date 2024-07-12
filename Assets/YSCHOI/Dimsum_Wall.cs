@@ -21,5 +21,9 @@ public class Dimsum_Wall: MonoBehaviour
             gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x + 0.001f, gameObject.transform.localScale.y + 0.001f);
             gameObject.transform.position = new Vector2(gameObject.transform.position.x + 0.003f, gameObject.transform.position.y);
         }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
     }
 }
