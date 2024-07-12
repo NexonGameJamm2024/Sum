@@ -15,8 +15,6 @@ public class Dimsum_Skill1 : MonoBehaviour
     private GameObject Wall;
     [SerializeField]
     private Transform CreatePosition;
-    [SerializeField]
-    private Transform[] maxXposition;
 
     private Rigidbody2D rb;
     private float x;
@@ -50,15 +48,15 @@ public class Dimsum_Skill1 : MonoBehaviour
             Debug.Log(Timer);
         }
 
-        if (x + 1 > pos.x && x - 1 < pos.x && maxY > pos.y && minY < pos.y)
+        if (x + 0.5f > pos.x && x - 0.5f < pos.x && maxY > pos.y && minY < pos.y)
         {
             gameObject.transform.position = new Vector2(pos.x, pos.y);
         }
-        else if (x + 1 > pos.x && x - 1 < pos.x && minY > pos.y)
+        else if (x + 0.5f > pos.x && x - 0.5f < pos.x && minY > pos.y)
         {
             gameObject.transform.position = new Vector2(pos.x, minY);
         }
-        else if(x + 1 > pos.x && x - 1 < pos.x && maxY < pos.y)
+        else if(x + 0.5f > pos.x && x - 0.5f < pos.x && maxY < pos.y)
         {
             gameObject.transform.position = new Vector2(pos.x, maxY);
         }

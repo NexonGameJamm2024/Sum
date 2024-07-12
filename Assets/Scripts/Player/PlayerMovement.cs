@@ -6,11 +6,8 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce = 10f;
     public LayerMask GroundLayer;
 
+    public static bool isDrag;
     private Rigidbody2D rb;
-
-    [SerializeField]
-    private float groundCheckRadius = 0.2f;
-
     private bool isGrounded;
 
     private void Start()
@@ -20,9 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        GroundCheck();
-        Move();
-        Jump();
+        if (!isDrag)
+        {
+            GroundCheck();
+            Move();
+            Jump();
+        }
     }
 
     private void Move()
