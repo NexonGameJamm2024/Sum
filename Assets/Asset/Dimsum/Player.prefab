@@ -168,7 +168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -928.327, y: -473.31482}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3901.673, y: 1581.6477}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2846895722913575077
@@ -246,8 +246,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1000
-  m_fontSizeBase: 1000
+  m_fontSize: 5000
+  m_fontSizeBase: 5000
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -421,7 +421,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e2a5e2ae4bf415b4ebf54f7318d9f47e, type: 2}
   m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -474,3 +474,4 @@ MonoBehaviour:
   checkMinY: 2
   Wall: {fileID: 990315619509863629, guid: 7c023603e06906f4394dac64d57c4b1e, type: 3}
   CreatePosition: {fileID: 8965302897834916389}
+  isDrag: 0
