@@ -43,6 +43,7 @@ public class Dimsum_Skill1 : MonoBehaviour
 
         if(lastPos.x != transform.localPosition.x)
         {
+            rb.velocity = Vector3.zero;
             lastPos = transform.localPosition;
             Timer = Timer + Time.deltaTime;
             Debug.Log(Timer);
