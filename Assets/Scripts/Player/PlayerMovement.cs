@@ -5,11 +5,12 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed = 5f;
     public float JumpForce = 10f;
     public LayerMask GroundLayer;
-    public Transform GroundCheckPoint;
 
     private Rigidbody2D rb;
+
     [SerializeField]
     private float groundCheckRadius = 0.2f;
+
     private bool isGrounded;
 
     private void Start()
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundCheck()
     {
-        if (rb.velocity.y < 0) //내려갈떄만 스캔
+        if (rb.velocity.y < 0)
         {
             Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1, GroundLayer);
