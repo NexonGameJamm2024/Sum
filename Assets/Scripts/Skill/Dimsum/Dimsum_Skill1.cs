@@ -20,7 +20,7 @@ public class Dimsum_Skill1 : MonoBehaviour
     private float x;
     private float Timer;
     private Vector3 lastPos;
-    private bool isDrag = false;
+    public bool isDrag = false;
     private bool isFirst = false;
 
     private void Start()
@@ -37,7 +37,7 @@ public class Dimsum_Skill1 : MonoBehaviour
             x = pos.x;
             isFirst = true;
             rb.gravityScale = 0.5f;
-            PlayerMovement1.isDrag = true;
+            PlayerMovement.isDrag = true;
 
         }
 
@@ -76,13 +76,13 @@ public class Dimsum_Skill1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (PlayerMovement1.isDrag && Timer > 0.5f)
+        if (PlayerMovement.isDrag && Timer > 0.5f)
         {
             this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
             GameObject temp = Instantiate(Wall, CreatePosition.position, Quaternion.identity);
         }
 
-        PlayerMovement1.isDrag = false;
+        PlayerMovement.isDrag = false;
         rb.gravityScale = 1f;
         isFirst = false;
         Timer = 0f;

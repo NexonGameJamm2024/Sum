@@ -2,14 +2,23 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject A;  //A라는 GameObject변수 선언
-    Transform AT;
+    public GameObject Target;
+    Transform TargetTr; 
+
     void Start()
     {
-        AT = A.transform;
+        TargetTr = Target.transform; 
     }
+
     void LateUpdate()
     {
-        transform.position = new Vector3(AT.position.x, AT.position.y, transform.position.z);
+        if (!PlayerMovement.isDrag)
+        {
+            transform.position = new Vector3(TargetTr.position.x, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        }
     }
 }
