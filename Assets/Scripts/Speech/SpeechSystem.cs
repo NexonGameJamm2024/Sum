@@ -19,7 +19,7 @@ public class SpeechSystem : MonoBehaviour
 
     [Header("TextMesh")]
     [SerializeField]
-    private TextMeshProUGUI SpeechText;
+    TMP_Text SpeechText;
 
 
     void Start()
