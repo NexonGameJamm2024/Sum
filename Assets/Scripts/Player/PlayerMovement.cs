@@ -15,14 +15,22 @@ public class PlayerMovement : MonoBehaviour
         TryGetComponent(out rb);
     }
 
+    private void FixedUpdate()
+    {
+        if (!isDrag)
+        {
+            Move();
+        }
+    }
+
     private void Update()
     {
         if (!isDrag)
         {
             GroundCheck();
-            Move();
             Jump();
         }
+
     }
 
     private void Move()
