@@ -13,6 +13,7 @@ public class TimeLineManager : MonoBehaviour
     {
         // 현재 playableDirector에 등록되어 있는 타임라인을 실행
         playableDirector.Play();
+        SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.ButtonClick);
     }
 
     public void PlayFromTimeline()

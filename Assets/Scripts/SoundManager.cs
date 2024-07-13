@@ -51,7 +51,7 @@ public class SoundManager : MonoBehaviour
     {
         if (arg0.name == "StartScene")
         {
-            BgSoundPlay(bgList[1]);
+            BgSoundPlay(bgList[0]);
         }
         else if (arg0.name == "Dimsum")
         {
