@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "DownSum")
             SceneManager.LoadScene("JuSum");
         else
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("EndScene");
 
     }
 }
