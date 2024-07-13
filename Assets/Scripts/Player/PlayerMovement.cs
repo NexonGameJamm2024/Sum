@@ -50,16 +50,28 @@ public class PlayerMovement : MonoBehaviour
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             GetComponent<SpriteRenderer>().flipX = false;
+            if(gameObject.name == "JuSum")
+            {
+                anim.SetBool("isWalk", true);
+            }
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             GetComponent<SpriteRenderer>().flipX = true;
+            if (gameObject.name == "JuSum")
+            {
+                anim.SetBool("isWalk", true);
+            }
         }
         else
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
+            if (gameObject.name == "JuSum")
+            {
+                anim.SetBool("isWalk", false);
+            }
         }
     }
 
@@ -68,8 +80,11 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            anim.SetTrigger("doJumping");
-            anim.SetBool("isJump", true);
+            if(gameObject.name != "WhyDownSum")
+            {
+                anim.SetTrigger("doJumping");
+                anim.SetBool("isJump", true);
+            }
             //Debug.Log("나 뛰었다");
         }
     }

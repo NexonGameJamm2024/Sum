@@ -22,10 +22,12 @@ public class Dimsum_Skill1 : MonoBehaviour
     private Vector3 lastPos;
     public bool isDrag = false;
     private bool isFirst = false;
+    private Animator anim;
 
     private void Start()
     {
         TryGetComponent(out rb);
+        anim = GetComponent<Animator>();
     }
 
     private void OnMouseDrag()
@@ -38,7 +40,10 @@ public class Dimsum_Skill1 : MonoBehaviour
             isFirst = true;
             rb.gravityScale = 0.5f;
             PlayerMovement.isDrag = true;
-
+            anim.SetTrigger("doSwing");
+            anim.SetBool("isFall", false);
+            anim.SetBool("isLand", false);
+            anim.SetBool("isFalse", false);
         }
 
         if(lastPos.x != transform.localPosition.x)
@@ -46,7 +51,7 @@ public class Dimsum_Skill1 : MonoBehaviour
             rb.velocity = Vector3.zero;
             lastPos = transform.localPosition;
             Timer = Timer + Time.deltaTime;
-            Debug.Log(Timer);
+            //Debug.Log(Timer);
         }
 
         if (x + 0.5f > pos.x && x - 0.3f < pos.x && maxY > pos.y && minY < pos.y)
@@ -75,12 +80,22 @@ public class Dimsum_Skill1 : MonoBehaviour
         }
     }
 
+    private void OnMouseUp()
+    {
+        anim.SetBool("isFall", true);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (PlayerMovement.isDrag && Timer > 0.5f)
         {
             this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
             GameObject temp = Instantiate(Wall, CreatePosition.position, Quaternion.identity);
+            anim.SetBool("isLand", true);
+        }
+        else
+        {
+            anim.SetBool("isFalse", true);
         }
 
         PlayerMovement.isDrag = false;

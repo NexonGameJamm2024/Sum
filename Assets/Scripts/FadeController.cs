@@ -29,6 +29,12 @@ public class FadeController : MonoBehaviour
         StartCoroutine(CoFadeOut());
     }
 
+    public void FadeIn()
+    {
+        panel.SetActive(true);
+        StartCoroutine(CoFadeIn());
+    }
+
     IEnumerator CoFadeIn()
     {
         float elapsedTime = 0f;
@@ -48,7 +54,7 @@ public class FadeController : MonoBehaviour
     IEnumerator CoFadeOut()
     {
         float elapsedTime = 0f;
-        float fadedTime = 1.5f;
+        float fadedTime = 1f;
 
         while (elapsedTime <= fadedTime)
         {

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     GameObject StartPoint;
     [SerializeField]
     GameObject Player;
+    [SerializeField]
+    FadeController Fade;
 
     private void Update()
     {
@@ -27,16 +29,23 @@ public class GameManager : MonoBehaviour
 
     public void RestartScene()
     {
+        Fade.FadeOut();
+        Invoke("checkScene", 1f);
+    }
+
+    private void checkScene()
+    {
         if (SceneManager.GetActiveScene().name == "Dimsum")
         {
             GameObject[] DummyObject = GameObject.FindGameObjectsWithTag("Throw");
 
-            foreach(GameObject temp in DummyObject)
+            foreach (GameObject temp in DummyObject)
             {
                 Destroy(temp);
             }
 
             Player.GetComponent<PlayerMovement>().ResetValues(StartPoint.transform.position);
+            Fade.FadeIn();
         }
         else if (SceneManager.GetActiveScene().name == "JuSum")
         {
@@ -44,13 +53,15 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("JuSum");
         }
         else
-            Player.GetComponent<PlayerMovement>().ResetValues(StartPoint.transform.position);
+        { 
+            Player.GetComponent<DownSumMovement>().ResetValues(StartPoint.transform.position);
+            Fade.FadeIn();
+        }
     }
-
     public void NextScene()
     {
-        if (SceneManager.GetActiveScene().name == "Dimsum")
-            SceneManager.LoadScene("DownSum");
+        if (SceneManager.GetActiveScene().name == "JuSum")
+            SceneManager.LoadScene("Dimsum");
         else if (SceneManager.GetActiveScene().name == "DownSum")
             SceneManager.LoadScene("JuSum");
         else

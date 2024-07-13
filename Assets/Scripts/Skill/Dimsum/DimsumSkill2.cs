@@ -58,7 +58,6 @@ public class DimsumSkill2 : MonoBehaviour
             isTransparent = true;
 
             Effect.transform.GetChild(1).gameObject.SetActive(false);
-            Effect.transform.GetChild(2).gameObject.SetActive(false);
             Effect.SetActive(false);
             Fire.SetActive(true);
 
@@ -68,13 +67,9 @@ public class DimsumSkill2 : MonoBehaviour
         }
         else if(cookedCount == 15)
         {
-            Effect.transform.GetChild(2).gameObject.SetActive(true);
-        }
-        else if (cookedCount == 10)
-        {
             Effect.transform.GetChild(1).gameObject.SetActive(true);
         }
-        else if (cookedCount == 5)
+        else if (cookedCount == 10)
         {
             Effect.SetActive(true);
         }
@@ -87,6 +82,7 @@ public class DimsumSkill2 : MonoBehaviour
         dimsumColor.a = alpha;
         Dimsum.color = dimsumColor;
     }
+
 
     private IEnumerator ResetDimsumTransparency(float delay)
     {

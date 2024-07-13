@@ -7,6 +7,7 @@ public class WhyDownSum_Skill1 : MonoBehaviour
     public bool isFirst = false;
     private float Timer;
     private Vector3 lastPos;
+    public Animator bodyAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,9 @@ public class WhyDownSum_Skill1 : MonoBehaviour
         if (!isFirst)
         {
             isFirst = true;
+            bodyAnim.SetBool("isIdle", false);
+            bodyAnim.SetTrigger("doSurprise");
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90f));
             gameObject.GetComponent<SunGlass>().isAir = true;
         }
 

@@ -307,6 +307,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &108630912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1643833506518261233, guid: 8e6cc0bd3bfd7b9458c65dbd04198340, type: 3}
+  m_PrefabInstance: {fileID: 635069244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &110927136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8914203765248787942, guid: 304cd6dd60fe9e449b042bee11934a4b, type: 3}
@@ -1355,7 +1360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2708130765970883005, guid: 8e6cc0bd3bfd7b9458c65dbd04198340, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.89
+      value: 21.69
       objectReference: {fileID: 0}
     - target: {fileID: 2708130765970883005, guid: 8e6cc0bd3bfd7b9458c65dbd04198340, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2244,6 +2249,10 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5836514054184292021, guid: 238694988f62af54ea72b649d7277d8d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5836514054184292025, guid: 238694988f62af54ea72b649d7277d8d, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2339,6 +2348,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5836514054184292026, guid: 238694988f62af54ea72b649d7277d8d, type: 3}
   m_PrefabInstance: {fileID: 1034833326}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1034833328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5836514054184292022, guid: 238694988f62af54ea72b649d7277d8d, type: 3}
+  m_PrefabInstance: {fileID: 1034833326}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aeca70383407204eb65126518c75a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1044290850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8914203765248787942, guid: 304cd6dd60fe9e449b042bee11934a4b, type: 3}
@@ -3771,11 +3791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7742255561950135128, guid: 648653954189ed64580d67b923d87d79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.84
+      value: -20.44
       objectReference: {fileID: 0}
     - target: {fileID: 7742255561950135128, guid: 648653954189ed64580d67b923d87d79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.78
+      value: 22.99
       objectReference: {fileID: 0}
     - target: {fileID: 7742255561950135128, guid: 648653954189ed64580d67b923d87d79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4230,6 +4250,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8218789699506216969, guid: 837d7774dc91a90408d67c58a4118676, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 2122604329}
     - target: {fileID: 89639694841743374, guid: 837d7774dc91a90408d67c58a4118676, type: 3}
       propertyPath: m_Name
       value: FallCheckTrigger
@@ -5065,8 +5089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40defa8799b72140b3f6ebe7447d5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartPoint: {fileID: 0}
-  Player: {fileID: 0}
+  StartPoint: {fileID: 108630912}
+  Player: {fileID: 1640484761}
+  Fade: {fileID: 1034833328}
 --- !u!4 &2122604331
 Transform:
   m_ObjectHideFlags: 0

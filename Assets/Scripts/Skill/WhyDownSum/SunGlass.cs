@@ -12,8 +12,9 @@ public class SunGlass : MonoBehaviour
     public bool isAir;
     private Vector3 lastPos;
     private float Timer;
-    private bool isSkill;
+    public bool isSkill;
     private float Dist;
+    public Animator bodyAnim;
 
     [SerializeField] TMP_Text text1;
     [SerializeField] TMP_Text bridge;
@@ -59,17 +60,16 @@ public class SunGlass : MonoBehaviour
 
     void CheckTimer()
     {
-        if (Timer > 3.5f)
+        if (Timer > 4f)
         {
-            Timer = 0;
-            isSkill = true;
+            Timer = 0f;
             MakeBridge();
         }
     }
 
     void MakeBridge()
     {
-        isSkill = false;
+        bodyAnim.SetTrigger("doSkill");
         Vector2 v = gameObject.transform.position - player_tf.position;
         float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
         
@@ -97,7 +97,6 @@ public class SunGlass : MonoBehaviour
         {
             Instantiate(bridge, CreatePosisiton[4].position, Quaternion.Euler(0, 0, angle));
         }
-
         //Instantiate(bridge, CreatePosisiton.position, Quaternion.Euler(0, 0, angle));
     }
 
@@ -108,8 +107,10 @@ public class SunGlass : MonoBehaviour
         if (Dist > 10)
         {
             isAir = false;
+            transform.rotation = player.transform.GetChild(7).rotation;
             isSkill = false;
             StartCoroutine(nameof(ResetFirst));
+            bodyAnim.SetBool("isIdle", true);
         }
     }
 

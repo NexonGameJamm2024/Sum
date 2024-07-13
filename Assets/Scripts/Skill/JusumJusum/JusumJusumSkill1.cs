@@ -9,6 +9,7 @@ public class JusumJusumSkill1 : MonoBehaviour
 
     private int breakIndex;
     private int JusumCount;
+    private Animator anim;
 
     [SerializeField]
     private GameObject[] platform;
@@ -22,11 +23,15 @@ public class JusumJusumSkill1 : MonoBehaviour
     // 장애물 배열
     private bool[] obstaclesHit = new bool[101];
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-
+            anim.SetTrigger("doSkill");
             Destroy(collision.gameObject);
 
             int obstacleNumber = GetObstacleNumber(collision.gameObject);
