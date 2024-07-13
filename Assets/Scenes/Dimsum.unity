@@ -188,8 +188,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uB524\uC12C\uC758 \uAD6D\uBB3C \uB9DB\uC744 \uBCFC\uAE4C\uC694?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be1b9d0b5a5fec44680ac44b46c63de5, type: 2}
-  m_sharedMaterial: {fileID: 7365746016766532832, guid: be1b9d0b5a5fec44680ac44b46c63de5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c070114f124af7341b69c84865cc7da8, type: 2}
+  m_sharedMaterial: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -278,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7365746016766532832, guid: be1b9d0b5a5fec44680ac44b46c63de5, type: 2}
+  - {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1432,6 +1432,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 570885252238689548, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: texts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 570885252238689548, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: texts.Array.data[4]
+      value: "\uB4DC\uB514\uC5B4 \uB9CC\uB0AC\uAD70!"
+      objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767448, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_Name
       value: Dimsum
@@ -1480,6 +1488,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4118564614270471931, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
+    - target: {fileID: 8529270934133553129, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c070114f124af7341b69c84865cc7da8, type: 2}
+    - target: {fileID: 8529270934133553129, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
 --- !u!1001 &1029911611
@@ -2450,8 +2470,8 @@ MonoBehaviour:
   m_text: "\uB524\uC12C\uC740 \uCA84\uC11C \uBA39\uB294 \uC74C\uC2DD\uC774\uC5D0\uC694.
     \uC5F4\uC2EC\uD788 \uB2EC\uB9AC\uBA74 \uBD88\uC774 \uB0A0\uC9C0\uB3C4?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: be1b9d0b5a5fec44680ac44b46c63de5, type: 2}
-  m_sharedMaterial: {fileID: 7365746016766532832, guid: be1b9d0b5a5fec44680ac44b46c63de5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c070114f124af7341b69c84865cc7da8, type: 2}
+  m_sharedMaterial: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2540,7 +2560,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7365746016766532832, guid: be1b9d0b5a5fec44680ac44b46c63de5, type: 2}
+  - {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
