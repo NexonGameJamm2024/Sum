@@ -4602,6 +4602,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1530508094511313885, guid: 648653954189ed64580d67b923d87d79, type: 3}
+      propertyPath: texts.Array.data[0]
+      value: "\uC8FC\uC12C\uC8FC\uC12C.."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530508094511313885, guid: 648653954189ed64580d67b923d87d79, type: 3}
+      propertyPath: texts.Array.data[1]
+      value: "\uBD80\uC2A4\uB7ED\uBD80\uC2A4\uB7ED.."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530508094511313885, guid: 648653954189ed64580d67b923d87d79, type: 3}
+      propertyPath: texts.Array.data[2]
+      value: "\uD788\uD788 \uB2E4 \uB0B4~\uAF2C\uC58C~"
+      objectReference: {fileID: 0}
     - target: {fileID: 3837196952002585713, guid: 648653954189ed64580d67b923d87d79, type: 3}
       propertyPath: board
       value: 

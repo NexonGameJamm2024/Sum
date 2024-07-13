@@ -10,7 +10,7 @@ public class EndCheck : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.tag);
-        if (collision. ("Player"))
+        if (collision.CompareTag("Player"))
         {
             GameManager.GetComponent<GameManager>().NextScene();
         }

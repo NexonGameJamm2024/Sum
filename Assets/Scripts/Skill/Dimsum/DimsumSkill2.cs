@@ -28,13 +28,13 @@ public class DimsumSkill2 : MonoBehaviour
 
     private void CookedSkill()
     {
-        if (!isTransparent && !isLeftTouch && Input.GetKeyDown(KeyCode.LeftArrow))
+        if (!isTransparent && !isLeftTouch && Input.GetKeyDown(KeyCode.A))
         {
             cookedCount++;
             isRightTouch = false;
             isLeftTouch = true;
         }
-        else if (!isTransparent && !isRightTouch && Input.GetKeyDown(KeyCode.RightArrow))
+        else if (!isTransparent && !isRightTouch && Input.GetKeyDown(KeyCode.D))
         {
             cookedCount++;
             isLeftTouch = false;

@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float MoveSpeed = 5f;
     public float JumpForce = 10f;
+    [SerializeField] private Transform groundPoint = null;
     public LayerMask GroundLayer;
 
     private float _MoveSpeed;
@@ -38,6 +39,11 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        if (!isGrounded)
+        {
+            Debug.Log("아아아아아아아아아아아");
+        }
+
     }
 
     private void Move()
@@ -48,28 +54,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (!isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            isGrounded = true;
             Debug.Log("나 뛰었다");
         }
     }
 
     private void GroundCheck()
     {
-        if (rb.velocity.y < 0)
-        {
-            Debug.DrawRay(rb.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rb.position, Vector3.down, 1, GroundLayer);
-            if (rayHit.collider != null)
-            {
-                if (rayHit.distance < 1f)
-                {
-                    isGrounded = false;
-                }
-            }
-        }
+        Debug.DrawRay(groundPoint.position, Vector3.down * 0.2f, new Color(0, 1, 0));
+        var ang = Physics2D.RaycastAll(groundPoint.position, Vector2.down, 0.2f, GroundLayer);
+        isGrounded = ang.Length > 0;
     }
 
     public void ResetValues(Vector3 ResetPosition)
