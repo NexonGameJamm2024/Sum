@@ -642,6 +642,46 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+--- !u!4 &763205822 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3744088299542059348, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205823 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8986749391371192111, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205824 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5355039881894872635, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5411904448559347861, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205826 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1677147832261508673, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4554871332395468278, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4267257552900817685, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763205829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1578188792289101009, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+  m_PrefabInstance: {fileID: 763205821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1223446879
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +925,15 @@ MonoBehaviour:
   isAir: 0
   text1: {fileID: 712470011}
   bridge: {fileID: 8596595593815298522, guid: e58962b2f13ee554ab35297d0b7d723e, type: 3}
+  CreatePosisiton:
+  - {fileID: 763205822}
+  - {fileID: 763205829}
+  - {fileID: 763205828}
+  - {fileID: 763205827}
+  - {fileID: 763205826}
+  - {fileID: 763205825}
+  - {fileID: 763205824}
+  - {fileID: 763205823}
 --- !u!1 &1575630664
 GameObject:
   m_ObjectHideFlags: 0

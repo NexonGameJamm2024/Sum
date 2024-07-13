@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SunGlass : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class SunGlass : MonoBehaviour
 
     [SerializeField] TMP_Text text1;
     [SerializeField] TMP_Text bridge;
+    public Transform[] CreatePosisiton;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +44,13 @@ public class SunGlass : MonoBehaviour
             CheckDist();
             if (lastPos != transform.localPosition)
             {
+                Vector2 v = gameObject.transform.position - player_tf.position;
+                float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+
+                Debug.Log(v);
+                Debug.Log(angle);
                 lastPos = transform.localPosition;
+
             }
             else
             {
@@ -66,10 +74,46 @@ public class SunGlass : MonoBehaviour
     void MakeBridge()
     {
         isSkill = false;
-        float angle = Mathf.Atan2(transform.position.y - player_tf.position.y, transform.position.x - player_tf.position.x) * Mathf.Rad2Deg / 2;
+        Vector2 v = gameObject.transform.position - player_tf.position;
+        float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
 
-
-        Instantiate(bridge, new Vector2((transform.position.y + player_tf.position.y) / 2, (transform.position.x + player_tf.position.x) / 2), Quaternion.Euler(0, 0, angle));
+        if (112.5f > angle && angle >= 67.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[0].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (67.5f > angle && angle >= 22.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[1].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (22.5 > angle && angle >= -22.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[2].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (-22.5f > angle && angle >= -67.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[3].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (-67.5f > angle && angle >= -112.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[4].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (-112.5f > angle && angle >= -157.5)
+        {
+            Instantiate(bridge, CreatePosisiton[5].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (180 >= angle && angle > 157.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[6].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (-180 <= angle && angle < -157.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[6].position, Quaternion.Euler(0, 0, angle));
+        }
+        else if (157.5f > angle && angle >= 112.5f)
+        {
+            Instantiate(bridge, CreatePosisiton[7].position, Quaternion.Euler(0, 0, angle));
+        }
+        //Instantiate(bridge, CreatePosisiton.position, Quaternion.Euler(0, 0, angle));
     }
 
     void CheckDist()
