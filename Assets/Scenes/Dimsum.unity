@@ -1179,6 +1179,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2010828745789114985, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767448, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_Name
       value: Dimsum
@@ -1193,11 +1197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767452, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 335.6
+      value: -5.79
       objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767452, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.2
+      value: 22.26
       objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767452, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2938,11 +2942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797116787783873166, guid: 4935a7f25249c7747b0928ecd52305e9, type: 3}
       propertyPath: m_Size.y
-      value: 1.8525436
+      value: 1.819122
       objectReference: {fileID: 0}
     - target: {fileID: 5797116787783873166, guid: 4935a7f25249c7747b0928ecd52305e9, type: 3}
       propertyPath: m_Offset.y
-      value: -0.68906224
+      value: -0.70577306
       objectReference: {fileID: 0}
     - target: {fileID: 5797116787783873167, guid: 4935a7f25249c7747b0928ecd52305e9, type: 3}
       propertyPath: m_Name

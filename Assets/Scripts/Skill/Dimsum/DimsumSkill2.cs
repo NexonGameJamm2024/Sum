@@ -9,14 +9,20 @@ public class DimsumSkill2 : MonoBehaviour
     private bool isLeftTouch;
     private bool isRightTouch;
     private bool isTransparent;
-
+    private Animator anim;
     private Color originalColor;
-
+    
     public SpriteRenderer Dimsum;
+    [SerializeField]
+    GameObject Effect;
+    [SerializeField]
+    GameObject Fire;
+
 
     private void Start()
     {
         originalColor = Dimsum.color;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -50,9 +56,30 @@ public class DimsumSkill2 : MonoBehaviour
             SetDimsumTransparency(0.5f);
             ActivateObstacleTriggers();
             isTransparent = true;
+
+            Effect.transform.GetChild(1).gameObject.SetActive(false);
+            Effect.transform.GetChild(2).gameObject.SetActive(false);
+            Effect.SetActive(false);
+            Fire.SetActive(true);
+
+            anim.SetBool("Skill2", true);
+            anim.SetTrigger("doSkill2");
             StartCoroutine(ResetDimsumTransparency(3f));
         }
+        else if(cookedCount == 15)
+        {
+            Effect.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        else if (cookedCount == 10)
+        {
+            Effect.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else if (cookedCount == 5)
+        {
+            Effect.SetActive(true);
+        }
     }
+
 
     private void SetDimsumTransparency(float alpha)
     {
@@ -64,7 +91,8 @@ public class DimsumSkill2 : MonoBehaviour
     private IEnumerator ResetDimsumTransparency(float delay)
     {
         yield return new WaitForSeconds(delay);
-
+        Fire.SetActive(false);
+        anim.SetBool("Skill2", false);
         Dimsum.color = originalColor;
         isTransparent = false;
         isRightTouch = false;
