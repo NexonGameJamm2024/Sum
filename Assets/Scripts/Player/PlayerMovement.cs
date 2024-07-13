@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask GroundLayer;
 
     public static bool isDrag;
+    public static bool isGrounded;
     private Rigidbody2D rb;
-    private bool isGrounded;
 
     private void Start()
     {

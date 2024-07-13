@@ -1,72 +1,113 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class JusumJusumSkill1 : MonoBehaviour
 {
-    private int dragCount = 0;
-    private Vector3 offset;
-    private bool isDragging = false;
-    private bool wasDraggedUp = false; // 이전 드래그가 위로 였는지 여부
+    private int TrashCount;
+    private bool isTrigger;
 
-    public GameObject trashPrefab;
-    public GameObject jewelPrefab;
+    private int breakIndex;
+    private int JusumCount;
 
+    [SerializeField]
+    private GameObject[] platform;
+
+    [SerializeField]
+    private GameObject board;
+
+    // 현재 부딪힌 장애물 번호
+    public int hitObstacleNumber;
+
+    // 장애물 배열
+    private bool[] obstaclesHit = new bool[101];
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+
+            Destroy(collision.gameObject);
+
+            int obstacleNumber = GetObstacleNumber(collision.gameObject);
+
+            if (obstacleNumber > 0 && obstacleNumber <= 100)
+            {
+                hitObstacleNumber = obstacleNumber;
+                obstaclesHit[hitObstacleNumber] = true;
+
+                CheckSmallerObstacles(hitObstacleNumber);
+            }
+
+            if (PlayerMovement.isDrag == true)
+            {
+                PlayerMovement.isDrag = false;
+                PlayerMovement.isGrounded = false;
+            }
+            TrashCount++;
+        }
+    }
+    private int GetObstacleNumber(GameObject obstacle)
+    {
+        //===장애물의 이름에서 번호 추출===//
+        string name = obstacle.name;
+        if (int.TryParse(name.Split('_')[1], out int number))
+        {
+            return number;
+        }
+        return -1;
+    }
+
+    private void CheckSmallerObstacles(int currentObstacle)
+    {
+        for (int i = 1; i < currentObstacle; i++)
+        {
+            if (!obstaclesHit[i])
+            {
+                if (board != null)
+                {
+                    CancelInvoke("BreakPlatformCount");
+                    Destroy(board.gameObject);
+                }
+            }
+        }
+    }
     private void Update()
     {
-        CheckDragCount();
+        TrashCountCheck();
     }
 
-    private void OnMouseDown()
+    private void TrashCountCheck()
     {
-        isDragging = true;
-        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
-    private void OnMouseUp()
-    {
-        isDragging = false;
-    }
-
-    private void OnMouseDrag()
-    {
-        if (isDragging)
+        if (!isTrigger && TrashCount >= 2)
         {
-            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, offset.z);
-            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-            transform.position = curPosition;
-
-            float deltaY = Input.GetAxis("Mouse Y");
-
-            if (deltaY > 0 && !wasDraggedUp) // 위로 드래그
-            {
-                dragCount++;
-                wasDraggedUp = true;
-            }
-            else if (deltaY < 0 && wasDraggedUp) // 아래로 드래그
-            {
-                dragCount++;
-                wasDraggedUp = false;
-            }
+            TrashCount = 0;
+            isTrigger = true;
+            StartCoroutine(BreakPlatformCount(1.5f));
         }
     }
 
-    private void CheckDragCount()
+    private IEnumerator BreakPlatformCount(float delay)
     {
-        if (dragCount >= 6)
-        {
-            dragCount = 0;
-            int randomIndex = Random.Range(0, 100);
-
-            if (randomIndex < 95)
-            {
-                Vector3 spawnPosition = transform.position + new Vector3(2f, 0f, 0f);
-                GameObject trash = Instantiate(trashPrefab, spawnPosition, Quaternion.identity);
-                Destroy(trash, 3f);
-            }
-            else if (randomIndex >= 95)
-            {
-                Vector3 spawnPosition = transform.position + new Vector3(2f, 0f, 0f);
-                Instantiate(jewelPrefab, spawnPosition, Quaternion.identity);
-            }
-        }
+        yield return new WaitForSeconds(delay);
+        BreakPlatform();
+        breakIndex++;
     }
+
+    private void BreakPlatform()
+    {
+        if (board == null) return;
+
+        if (breakIndex < platform.Length)
+        {
+            board.transform.position += new Vector3(3.38f, 0f, 0f);
+        }
+        else if (breakIndex >= platform.Length)
+        {
+            CancelInvoke("BreakPlatformCount");
+        }
+
+        StartCoroutine(BreakPlatformCount(0.5f));
+    }
+
 }
