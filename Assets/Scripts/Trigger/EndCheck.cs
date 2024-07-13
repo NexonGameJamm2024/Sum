@@ -11,6 +11,7 @@ public class EndCheck : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.PlopSound);
             GameObject temp = GameObject.FindGameObjectWithTag("Canvas");
             temp.GetComponent<FadeController>().FadeOut();
             StartCoroutine(nameof(ChangeScene));

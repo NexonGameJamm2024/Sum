@@ -12,6 +12,7 @@ public class FallCheck : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             GameManager.GetComponent<GameManager>().RestartScene();
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Fall);
         }
     }
 }

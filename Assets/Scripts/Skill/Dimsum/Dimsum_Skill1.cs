@@ -44,6 +44,8 @@ public class Dimsum_Skill1 : MonoBehaviour
             anim.SetBool("isFall", false);
             anim.SetBool("isLand", false);
             anim.SetBool("isFalse", false);
+
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.DimSwing);
         }
 
         if(lastPos.x != transform.localPosition.x)

@@ -24,6 +24,7 @@ public class WhyDownSum_Skill1 : MonoBehaviour
             bodyAnim.SetTrigger("doSurprise");
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90f));
             gameObject.GetComponent<SunGlass>().isAir = true;
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.WhyTaken);
         }
 
         Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

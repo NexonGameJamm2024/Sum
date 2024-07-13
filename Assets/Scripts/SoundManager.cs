@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource bgSound;
     public AudioSource effectSound;
-    public AudioSource walkSound;
+    public AudioSource WalkSound;
     public AudioSource WindSound;
     public AudioSource WaveSound;
     public AudioClip[] bgList;
@@ -18,7 +18,18 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] walkList;
     public enum EffectType
     {
-        ButtonClick
+        Fall,
+        Talk,
+        DimComebackToInvisible,
+        DimMove,
+        DimSwing,
+        GameClear,
+        JusMove,
+        ButtonClick,
+        PlopSound,
+        WhyMove,
+        WhyReget,
+        WhyTaken
     };
 
     private void Awake()
@@ -38,29 +49,27 @@ public class SoundManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
-        if (arg0.name == "Intro")
+        if (arg0.name == "StartScene")
         {
+            BgSoundPlay(bgList[1]);
+        }
+        else if (arg0.name == "Dimsum")
+        {
+            bgSound.Stop();
             BgSoundPlay(bgList[0]);
-        }
-        else if (arg0.name == "MainMenu")
-        {
-            //BgSoundPlay(bgList[1]);
-            bgSound.Stop();
-        }
-        else if (arg0.name == "DimSum")
-        {
-            //BgSoundPlay(bgList[1]);
-            bgSound.Stop();
-            walkSound.clip = walkList[0];
-            WindSound.Play();
+            WalkSound.clip = walkList[0];
         }
         else if (arg0.name == "DownSum")
         {
-            //BgSoundPlay(bgList[1]);
-            walkSound.clip = walkList[1];
-            WaveSound.Play();
+            bgSound.Stop();
+            BgSoundPlay(bgList[1]);
         }
-        else if (arg0.name == "End")
+        else if (arg0.name == "JuSum")
+        {
+            bgSound.Stop();
+            BgSoundPlay(bgList[2]);
+        }
+        else if (arg0.name == "EndScene")
         {
             BgSoundPlay(bgList[2]);
             WaveSound.Stop();

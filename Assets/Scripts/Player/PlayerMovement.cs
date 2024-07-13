@@ -50,7 +50,8 @@ public class PlayerMovement : MonoBehaviour
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             GetComponent<SpriteRenderer>().flipX = false;
-            if(gameObject.name == "JuSum")
+            //SoundManager.instance.WalkSound.Play();
+            if (gameObject.name == "JuSum")
             {
                 anim.SetBool("isWalk", true);
             }
@@ -60,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             GetComponent<SpriteRenderer>().flipX = true;
+            //SoundManager.instance.WalkSound.Play();
             if (gameObject.name == "JuSum")
             {
                 anim.SetBool("isWalk", true);
@@ -68,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
+            //SoundManager.instance.WalkSound.Stop();
             if (gameObject.name == "JuSum")
             {
                 anim.SetBool("isWalk", false);

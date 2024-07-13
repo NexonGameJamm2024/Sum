@@ -122,6 +122,7 @@ public class DimsumSkill2 : MonoBehaviour
             if (collider != null)
             {
                 collider.isTrigger = false;
+                SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.DimComebackToInvisible);
             }
         }
     }
