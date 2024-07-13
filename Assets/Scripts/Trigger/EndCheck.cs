@@ -9,10 +9,17 @@ public class EndCheck : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
         if (collision.CompareTag("Player"))
         {
-            GameManager.GetComponent<GameManager>().NextScene();
+            GameObject temp = GameObject.FindGameObjectWithTag("Canvas");
+            temp.GetComponent<FadeController>().FadeOut();
+            StartCoroutine(nameof(ChangeScene));
         }
+    }
+
+    IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(1.6f);
+        GameManager.GetComponent<GameManager>().NextScene();
     }
 }
