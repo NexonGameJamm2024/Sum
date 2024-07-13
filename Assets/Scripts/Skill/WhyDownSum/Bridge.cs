@@ -36,7 +36,7 @@ public class Bridge : MonoBehaviour
 
     IEnumerator Destroy()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(10);
         Destroy(gameObject);
     }
 }

@@ -9,6 +9,9 @@ public class FallCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.GetComponent<GameManager>().RestartScene();
+        if(collision.CompareTag("Player"))
+        {
+            GameManager.GetComponent<GameManager>().RestartScene();
+        }
     }
 }

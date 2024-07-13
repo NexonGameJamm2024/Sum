@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3549877551619668112}
   - component: {fileID: 8465853117453560819}
   - component: {fileID: 2232033010748286378}
+  - component: {fileID: 431099669469467925}
   m_Layer: 8
   m_Name: Sunglass
   m_TagString: Untagged
@@ -124,3 +125,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d43756f0280694e8e4467a4ed6397d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFirst: 0
+--- !u!114 &431099669469467925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835790683945635825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b3342bdec2f7545a656a6d0ac1b274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  isAir: 0
+  text1: {fileID: 0}
+  bridge: {fileID: 8596595593815298522, guid: e58962b2f13ee554ab35297d0b7d723e, type: 3}
+  CreatePosisiton:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

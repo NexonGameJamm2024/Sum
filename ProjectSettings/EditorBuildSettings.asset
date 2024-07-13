@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DownSum.unity
+    guid: e68d52b2a3f0fae439173c574b08e21b
+  - enabled: 1
+    path: Assets/Scenes/Dimsum.unity
+    guid: 4237d21c9270d1a47a05bf3a23e016f4
+  - enabled: 1
+    path: Assets/Scenes/JuSum.unity
+    guid: b85bfcd176bb6f645a11dc3d0793168c
   m_configObjects: {}

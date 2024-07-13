@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Throw
+  - End
   layers:
   - Default
   - TransparentFX

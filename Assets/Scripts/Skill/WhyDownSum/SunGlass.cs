@@ -45,10 +45,7 @@ public class SunGlass : MonoBehaviour
             if (lastPos != transform.localPosition)
             {
                 Vector2 v = gameObject.transform.position - player_tf.position;
-                float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-
-                Debug.Log(v);
-                Debug.Log(angle);
+                float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;    
                 lastPos = transform.localPosition;
 
             }
@@ -62,10 +59,9 @@ public class SunGlass : MonoBehaviour
 
     void CheckTimer()
     {
-        if (Timer > 5)
+        if (Timer > 3.5f)
         {
             Timer = 0;
-            Debug.Log("Skill");
             isSkill = true;
             MakeBridge();
         }
@@ -76,43 +72,32 @@ public class SunGlass : MonoBehaviour
         isSkill = false;
         Vector2 v = gameObject.transform.position - player_tf.position;
         float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-
-        if (112.5f > angle && angle >= 67.5f)
+        
+        if (112.5f > angle && angle >= -22.5f)
         {
             Instantiate(bridge, CreatePosisiton[0].position, Quaternion.Euler(0, 0, angle));
         }
-        else if (67.5f > angle && angle >= 22.5f)
+        else if (-22.5f > angle && angle >= -67.5f)
         {
             Instantiate(bridge, CreatePosisiton[1].position, Quaternion.Euler(0, 0, angle));
         }
-        else if (22.5 > angle && angle >= -22.5f)
+        else if (-67.5f > angle && angle >= -112.5f)
         {
             Instantiate(bridge, CreatePosisiton[2].position, Quaternion.Euler(0, 0, angle));
         }
-        else if (-22.5f > angle && angle >= -67.5f)
+        else if (-112.5f > angle && angle >= -157.5)
         {
             Instantiate(bridge, CreatePosisiton[3].position, Quaternion.Euler(0, 0, angle));
         }
-        else if (-67.5f > angle && angle >= -112.5f)
+        else if (180f >= angle && angle > 157.5f)
         {
             Instantiate(bridge, CreatePosisiton[4].position, Quaternion.Euler(0, 0, angle));
         }
-        else if (-112.5f > angle && angle >= -157.5)
+        else if (-180f <= angle && angle >= 112.5f)
         {
-            Instantiate(bridge, CreatePosisiton[5].position, Quaternion.Euler(0, 0, angle));
+            Instantiate(bridge, CreatePosisiton[4].position, Quaternion.Euler(0, 0, angle));
         }
-        else if (180 >= angle && angle > 157.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[6].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (-180 <= angle && angle < -157.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[6].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (157.5f > angle && angle >= 112.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[7].position, Quaternion.Euler(0, 0, angle));
-        }
+
         //Instantiate(bridge, CreatePosisiton.position, Quaternion.Euler(0, 0, angle));
     }
 
@@ -120,7 +105,7 @@ public class SunGlass : MonoBehaviour
     {
         Dist = Vector3.Distance(gameObject.transform.position, player_tf.position);
 
-        if (Dist > 8)
+        if (Dist > 10)
         {
             isAir = false;
             isSkill = false;
