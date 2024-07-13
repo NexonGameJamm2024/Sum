@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float MoveSpeed = 5f;
     public float JumpForce = 10f;
     public LayerMask GroundLayer;
+
+    private float _MoveSpeed;
+    private float _jumpForce;
 
     public static bool isDrag;
     public static bool isGrounded;
@@ -13,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         TryGetComponent(out rb);
+        _MoveSpeed = MoveSpeed;
+        _jumpForce = JumpForce;
     }
 
     private void FixedUpdate()
@@ -21,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Move();
         }
+
     }
 
     private void Update()
@@ -36,14 +43,14 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         float moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * MoveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
     }
 
     private void Jump()
     {
         if (!isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             isGrounded = true;
             Debug.Log("나 뛰었다");
         }
@@ -65,5 +72,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ResetValues(Vector3 ResetPosition)
+    {
+        isDrag = false;
+        isGrounded = false;
+        _MoveSpeed = MoveSpeed;
+        _jumpForce = JumpForce;
+
+        transform.position = ResetPosition;
+    }
 
 }
