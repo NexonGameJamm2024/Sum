@@ -1686,11 +1686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767452, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.79
+      value: -15.35
       objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767452, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.26
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 2846895723843767452, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1728,6 +1728,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
+    - target: {fileID: 5171224726527617458, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
+      propertyPath: maxY
+      value: 25.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8529270934133553129, guid: 4e691a65c7d8298449805efd23f3aaf7, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -1836,7 +1840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 908179403174595748, guid: 3684ab76215c62442aaf044d0d39aa5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.4
+      value: 10.800001
       objectReference: {fileID: 0}
     - target: {fileID: 908179403174595748, guid: 3684ab76215c62442aaf044d0d39aa5c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3826,7 +3830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 908179403174595748, guid: 3684ab76215c62442aaf044d0d39aa5c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.8
+      value: 9.2
       objectReference: {fileID: 0}
     - target: {fileID: 908179403174595748, guid: 3684ab76215c62442aaf044d0d39aa5c, type: 3}
       propertyPath: m_LocalPosition.z
