@@ -434,8 +434,6 @@ MonoBehaviour:
   bgSound: {fileID: 4247293759047487120}
   effectSound: {fileID: 4652389014494210807}
   WalkSound: {fileID: 1679708128371170013}
-  WindSound: {fileID: 0}
-  WaveSound: {fileID: 0}
   bgList:
   - {fileID: 8300000, guid: 9f3f057bba9edc342bc5601f60d8a8bc, type: 3}
   - {fileID: 8300000, guid: 684b36e8eef93b94389db6cb836d70a7, type: 3}
@@ -453,6 +451,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2799f6db8c997af4f8501a2a0bdb6350, type: 3}
   - {fileID: 8300000, guid: 737b2c54652c02148b46dfe2b4a85588, type: 3}
   - {fileID: 8300000, guid: 665076c5ce8b2ee48bbec667f2738d59, type: 3}
+  - {fileID: 8300000, guid: 50379441ef72c694191e2a90981a0082, type: 3}
+  - {fileID: 8300000, guid: d4578a70b071a7a4bbb78915f53a0639, type: 3}
+  - {fileID: 8300000, guid: 9c6d9069c3fc15b49bb67837272807c3, type: 3}
+  - {fileID: 8300000, guid: ca7dd2742cfca0448be0e98d3b6124fd, type: 3}
   walkList:
   - {fileID: 8300000, guid: 37aa062cd6ea5dd45a1cafb8384a6296, type: 3}
   - {fileID: 8300000, guid: 2799f6db8c997af4f8501a2a0bdb6350, type: 3}

@@ -14,6 +14,15 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] bgList;
     public AudioClip[] effectList;
     public AudioClip[] walkList;
+    public int VomitCount;
+    public int RapCount;
+    public float Timer;
+
+    private void Update()
+    {
+        Timer = Timer + Time.deltaTime;
+    }
+
     public enum EffectType
     {
         Fall,
@@ -27,7 +36,11 @@ public class SoundManager : MonoBehaviour
         PlopSound,
         WhyMove,
         WhyReget,
-        WhyTaken
+        WhyTaken,
+        Jump,
+        SmallFire,
+        BigFire,
+        Vomit
     };
 
     private void Awake()
@@ -72,7 +85,6 @@ public class SoundManager : MonoBehaviour
         else if (arg0.name == "EndScene")
         {
             bgSound.Stop();
-            BgSoundPlay(bgList[0]);
         }
     }
 

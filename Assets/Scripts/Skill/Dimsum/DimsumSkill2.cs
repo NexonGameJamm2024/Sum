@@ -18,6 +18,9 @@ public class DimsumSkill2 : MonoBehaviour
     [SerializeField]
     GameObject Fire;
 
+    private bool one;
+    private bool two;
+    private bool three;
 
     private void Start()
     {
@@ -50,7 +53,7 @@ public class DimsumSkill2 : MonoBehaviour
 
     private void CookedCheck()
     {
-        if (cookedCount >= 20)
+        if (cookedCount == 20)
         {
             cookedCount = 0;
             SetDimsumTransparency(0.5f);
@@ -60,17 +63,31 @@ public class DimsumSkill2 : MonoBehaviour
             Effect.transform.GetChild(1).gameObject.SetActive(false);
             Effect.SetActive(false);
             Fire.SetActive(true);
-
+            if (!three)
+            {
+                three = true;
+                SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.BigFire);
+            }
             anim.SetBool("Skill2", true);
             anim.SetTrigger("doSkill2");
             StartCoroutine(ResetDimsumTransparency(3f));
         }
         else if(cookedCount == 15)
         {
+            if (!two)
+            {
+                two = true;
+                SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.SmallFire);
+            }
             Effect.transform.GetChild(1).gameObject.SetActive(true);
         }
         else if (cookedCount == 10)
         {
+            if(!one)
+            {
+                one = true;
+                SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.SmallFire);
+            }
             Effect.SetActive(true);
         }
     }
@@ -93,6 +110,9 @@ public class DimsumSkill2 : MonoBehaviour
         isTransparent = false;
         isRightTouch = false;
         isLeftTouch = false;
+        one = false;
+        two = false;
+        three = false;
         DiableObstacleTriggers();
     }
 

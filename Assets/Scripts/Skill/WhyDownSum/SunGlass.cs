@@ -70,7 +70,7 @@ public class SunGlass : MonoBehaviour
     void MakeBridge()
     {
         SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Talk);
-
+        SoundManager.instance.RapCount++;
         bodyAnim.SetTrigger("doSkill");
         Vector2 v = gameObject.transform.position - player_tf.position;
         float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;

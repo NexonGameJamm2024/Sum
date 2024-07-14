@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Jump);
             if(gameObject.name != "WhyDownSum")
             {
                 SoundManager.instance.WalkSound.Stop();

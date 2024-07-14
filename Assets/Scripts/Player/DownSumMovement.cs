@@ -86,6 +86,7 @@ public class DownSumMovement : MonoBehaviour
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Jump);
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
 
             //Debug.Log("나 뛰었다");

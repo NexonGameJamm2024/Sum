@@ -15,6 +15,8 @@ public class Dimsum_Skill1 : MonoBehaviour
     private GameObject Wall;
     [SerializeField]
     private Transform CreatePosition;
+    [SerializeField]
+    GameObject Effect;
 
     private Rigidbody2D rb;
     private float x;
@@ -53,6 +55,10 @@ public class Dimsum_Skill1 : MonoBehaviour
             rb.velocity = Vector3.zero;
             lastPos = transform.localPosition;
             Timer = Timer + Time.deltaTime;
+            if(Timer >= 0.5f)
+            {
+                Effect.SetActive(true);
+            }
             //Debug.Log(Timer);
         }
 
@@ -94,6 +100,9 @@ public class Dimsum_Skill1 : MonoBehaviour
             this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
             GameObject temp = Instantiate(Wall, CreatePosition.position, Quaternion.identity);
             anim.SetBool("isLand", true);
+            SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Vomit);
+            SoundManager.instance.VomitCount++;
+            Effect.SetActive(false);
         }
         else
         {
