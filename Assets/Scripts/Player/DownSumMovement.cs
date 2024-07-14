@@ -12,6 +12,7 @@ public class DownSumMovement : MonoBehaviour
     private Vector3 lastPos;
     [SerializeField] GameObject Sunglass;
     [SerializeField] GameObject Body;
+    private string currentState;
 
     private float _MoveSpeed;
     private float _jumpForce;
@@ -49,7 +50,12 @@ public class DownSumMovement : MonoBehaviour
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             Body.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
-            if(!SG.isAir)
+            if (currentState != "Walk")
+            {
+                SoundManager.instance.WalkSound.Play();
+                currentState = "Walk";
+            }
+            if (!SG.isAir)
                 Sunglass.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
         }
         else if (Input.GetAxis("Horizontal") < 0)
@@ -57,11 +63,21 @@ public class DownSumMovement : MonoBehaviour
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             Body.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+            if (currentState != "Walk")
+            {
+                SoundManager.instance.WalkSound.Play();
+                currentState = "Walk";
+            }
             if (!SG.isAir)
                 Sunglass.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         }
         else
         {
+            if (currentState != "Idle")
+            {
+                SoundManager.instance.WalkSound.Stop();
+                currentState = "Idle";
+            }
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
     }
@@ -90,5 +106,14 @@ public class DownSumMovement : MonoBehaviour
         _jumpForce = JumpForce;
         bodyAnim.SetBool("isIdle", true);
         transform.position = ResetPosition;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.layer);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground") && rb.velocity.y < 0)
+        {
+            currentState = "Idle";
+        }
     }
 }

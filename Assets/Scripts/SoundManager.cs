@@ -11,8 +11,6 @@ public class SoundManager : MonoBehaviour
     public AudioSource bgSound;
     public AudioSource effectSound;
     public AudioSource WalkSound;
-    public AudioSource WindSound;
-    public AudioSource WaveSound;
     public AudioClip[] bgList;
     public AudioClip[] effectList;
     public AudioClip[] walkList;
@@ -63,21 +61,18 @@ public class SoundManager : MonoBehaviour
         {
             bgSound.Stop();
             BgSoundPlay(bgList[1]);
+            WalkSound.clip = walkList[1];
         }
         else if (arg0.name == "JuSum")
         {
             bgSound.Stop();
             BgSoundPlay(bgList[2]);
+            WalkSound.clip = walkList[2];
         }
         else if (arg0.name == "EndScene")
         {
-            BgSoundPlay(bgList[2]);
-            WaveSound.Stop();
-            WindSound.Stop();
-            if (arg0.name == "DeadEnding")
-            {
-                //SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Die);
-            }
+            bgSound.Stop();
+            BgSoundPlay(bgList[0]);
         }
     }
 
@@ -93,12 +88,6 @@ public class SoundManager : MonoBehaviour
     {
         effectSound.volume = 0.7f;
         effectSound.PlayOneShot(effectList[type]);
-    }
-
-    public void HorrorEffectSoundPlay(AudioClip horror)
-    {
-        effectSound.volume = 1f;
-        effectSound.PlayOneShot(horror);
     }
 
 }

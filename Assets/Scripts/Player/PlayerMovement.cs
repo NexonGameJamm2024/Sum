@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float _MoveSpeed;
     private float _jumpForce;
+    private string currentState;
 
     public static bool isDrag;
     private bool isMove;
@@ -47,10 +48,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetAxis("Horizontal") > 0)
         {
+            if(currentState != "Walk")
+            {
+               SoundManager.instance.WalkSound.Play();
+                currentState = "Walk";
+            }
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             GetComponent<SpriteRenderer>().flipX = false;
-            //SoundManager.instance.WalkSound.Play();
             if (gameObject.name == "JuSum")
             {
                 anim.SetBool("isWalk", true);
@@ -58,10 +63,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
+            if (currentState != "Walk")
+            {
+                SoundManager.instance.WalkSound.Play();
+                currentState = "Walk";
+            }
             float moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(moveInput * _MoveSpeed, rb.velocity.y);
             GetComponent<SpriteRenderer>().flipX = true;
-            //SoundManager.instance.WalkSound.Play();
             if (gameObject.name == "JuSum")
             {
                 anim.SetBool("isWalk", true);
@@ -70,6 +79,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
+            if (currentState != "Idle")
+            {
+                SoundManager.instance.WalkSound.Stop();
+                currentState = "Idle";
+            }
             //SoundManager.instance.WalkSound.Stop();
             if (gameObject.name == "JuSum")
             {
@@ -85,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             if(gameObject.name != "WhyDownSum")
             {
+                SoundManager.instance.WalkSound.Stop();
                 anim.SetTrigger("doJumping");
                 anim.SetBool("isJump", true);
             }
@@ -115,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground") && rb.velocity.y <0)
         {
             anim.SetBool("isJump", false);
+            currentState = "Idle";
         }
     }
 }
