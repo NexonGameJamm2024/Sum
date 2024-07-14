@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 100823417}
   - component: {fileID: 100823416}
   - component: {fileID: 100823415}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,8 +531,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: -854169631
+  m_SortingOrder: 101
   m_TargetDisplay: 0
 --- !u!1 &122392649
 GameObject:
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 703732092}
   - component: {fileID: 703732091}
   - component: {fileID: 703732090}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2348,13 +2348,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1400034691}
   - component: {fileID: 1400034692}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1400034691
 Transform:
   m_ObjectHideFlags: 0
@@ -2409,9 +2409,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingLayerID: -854169631
+  m_SortingLayer: 3
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 145e8711165aa2b45841b3a33f4bd686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2702,7 +2702,7 @@ GameObject:
   - component: {fileID: 1808111932}
   - component: {fileID: 1808111931}
   - component: {fileID: 1808111930}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3471,7 +3471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9097834625110729038, guid: b71d7e511c4d8754eb981338ac220916, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.21
+      value: 23.4
       objectReference: {fileID: 0}
     - target: {fileID: 9097834625110729038, guid: b71d7e511c4d8754eb981338ac220916, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3504,6 +3504,10 @@ PrefabInstance:
     - target: {fileID: 9097834625110729038, guid: b71d7e511c4d8754eb981338ac220916, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097834625110729039, guid: b71d7e511c4d8754eb981338ac220916, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b71d7e511c4d8754eb981338ac220916, type: 3}
