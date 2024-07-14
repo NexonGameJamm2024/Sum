@@ -660,8 +660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 1549345504}
-  a: {fileID: 0}
-  b: {fileID: 0}
 --- !u!4 &230313267
 Transform:
   m_ObjectHideFlags: 0
@@ -4304,7 +4302,7 @@ PrefabInstance:
       objectReference: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
     - target: {fileID: 1530508094511313885, guid: 648653954189ed64580d67b923d87d79, type: 3}
       propertyPath: texts.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1530508094511313885, guid: 648653954189ed64580d67b923d87d79, type: 3}
       propertyPath: texts.Array.data[4]

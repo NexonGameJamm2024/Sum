@@ -746,6 +746,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 592b146f835061d4b9e997607b2cae5c, type: 3}
     - target: {fileID: 6470905183355878425, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+      propertyPath: texts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470905183355878425, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
       propertyPath: texts.Array.data[0]
       value: "\uBB50\uAC00 \uBB38\uC81C\uC57C Say \uC12Cthing"
       objectReference: {fileID: 0}
@@ -756,6 +760,10 @@ PrefabInstance:
     - target: {fileID: 6470905183355878425, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
       propertyPath: texts.Array.data[2]
       value: "\uC77C\uC5B4 \uB0A0 \uC2DC\uAC04\uC774\uC57C !!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470905183355878425, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
+      propertyPath: texts.Array.data[3]
+      value: "\uD37C\uC990\uB85C \uB098\uB97C \uC774\uAE38 \uC790\uB294 \uC5C6\uB2E4!"
       objectReference: {fileID: 0}
     - target: {fileID: 6792634585155558980, guid: 99e5f2f6a36a7c04d9a056b845c21f73, type: 3}
       propertyPath: m_Materials.Array.data[0]
