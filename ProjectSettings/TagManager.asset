@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Sunglass
   - Brigde
-  - 
+  - pause
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3896481549
+    locked: 0
+  - name: pause
+    uniqueID: 3440797665
     locked: 0
