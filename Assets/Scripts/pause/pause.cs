@@ -8,12 +8,6 @@ public class pause : MonoBehaviour
     [SerializeField]
     private GameObject PausePanel;
 
-    [SerializeField]
-    private GameObject a;
-
-    [SerializeField]
-    private GameObject b;
-
     private bool isCheck;
 
     void Update()
