@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,21 +10,24 @@ using UnityEngine.UIElements;
 public class SunGlass : MonoBehaviour
 {
     public GameObject player;
-    private Transform player_tf;
     public bool isAir;
+    public bool isSkill;
+    public Animator bodyAnim;
+    public Transform CreatePosisiton;
+    
+    private Transform player_tf;
     private Vector3 lastPos;
     private float Timer;
-    public bool isSkill;
     private float Dist;
-    public Animator bodyAnim;
-
+    private WhyDownSum_Skill1 skill;
+    
     [SerializeField] TMP_Text text1;
     [SerializeField] TMP_Text bridge;
-    public Transform CreatePosisiton;
 
     // Start is called before the first frame update
     void Start()
     {
+        skill = gameObject.GetComponent<WhyDownSum_Skill1>();
         player_tf = player.GetComponent<Transform>();
     }
 
@@ -85,19 +90,20 @@ public class SunGlass : MonoBehaviour
 
         if (Dist > 10)
         {
-            isAir = false;
             transform.rotation = player.transform.GetChild(3).rotation;
+            isAir = false;
             isSkill = false;
-            StartCoroutine(nameof(ResetFirst));
+            Timer = 0f;
+            ResetisFrist().Forget();
             bodyAnim.SetBool("isIdle", true);
             SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.WhyReget);
         }
     }
 
-    IEnumerator ResetFirst()
+    async UniTask ResetisFrist()
     {
-        yield return new WaitForSeconds(1f);
-        gameObject.GetComponent<WhyDownSum_Skill1>().isFirst = false;
+        await UniTask.Delay(TimeSpan.FromSeconds(1f));
+        skill.isFirst = false;
     }
 
 }

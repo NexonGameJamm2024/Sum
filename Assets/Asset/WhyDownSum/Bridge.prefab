@@ -102,7 +102,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC00\uB098\uB2E4\uB77C"
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c070114f124af7341b69c84865cc7da8, type: 2}
   m_sharedMaterial: {fileID: 8650390137457218139, guid: c070114f124af7341b69c84865cc7da8, type: 2}
@@ -212,4 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3377da11239d954aa529d314ae197f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outputText: "\uAC00\uB098\uB2E4\uB77C\uB9C8\uBC14\uC0AC\uC544\uC790\uD0C0 \uD30C
+    \uD558\uD558 \uD558 \uD558\uD558\uD558 \uD558 \uD558 \uD558 \uD558"
   speed: 1
+  isColliderOn: 0
