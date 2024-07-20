@@ -18,7 +18,7 @@ public class SunGlass : MonoBehaviour
 
     [SerializeField] TMP_Text text1;
     [SerializeField] TMP_Text bridge;
-    public Transform[] CreatePosisiton;
+    public Transform CreatePosisiton;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +37,7 @@ public class SunGlass : MonoBehaviour
     {
         if (!isAir && !isSkill)
         {
-            gameObject.transform.position = new Vector3(player_tf.position.x, player_tf.position.y + 0.25f, player_tf.position.z);
+            gameObject.transform.position = new Vector3(player_tf.position.x, player_tf.position.y + 0.1f, player_tf.position.z);
         }
         else
         {
@@ -72,34 +72,11 @@ public class SunGlass : MonoBehaviour
         SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Talk);
         SoundManager.instance.RapCount++;
         bodyAnim.SetTrigger("doSkill");
-        Vector2 v = gameObject.transform.position - player_tf.position;
+        Vector3 v = gameObject.transform.position - player_tf.position;
         float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+        Vector3 vDir = v.normalized;
         
-        if (112.5f > angle && angle >= -22.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[0].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (-22.5f > angle && angle >= -67.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[1].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (-67.5f > angle && angle >= -112.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[2].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (-112.5f > angle && angle >= -157.5)
-        {
-            Instantiate(bridge, CreatePosisiton[3].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (180f >= angle && angle > 157.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[4].position, Quaternion.Euler(0, 0, angle));
-        }
-        else if (-180f <= angle && angle >= 112.5f)
-        {
-            Instantiate(bridge, CreatePosisiton[4].position, Quaternion.Euler(0, 0, angle));
-        }
-        //Instantiate(bridge, CreatePosisiton.position, Quaternion.Euler(0, 0, angle));
+        TMP_Text temp = Instantiate(bridge, CreatePosisiton.position + vDir * 1.5f, Quaternion.Euler(0, 0, angle));
     }
 
     void CheckDist()
@@ -109,7 +86,7 @@ public class SunGlass : MonoBehaviour
         if (Dist > 10)
         {
             isAir = false;
-            transform.rotation = player.transform.GetChild(7).rotation;
+            transform.rotation = player.transform.GetChild(3).rotation;
             isSkill = false;
             StartCoroutine(nameof(ResetFirst));
             bodyAnim.SetBool("isIdle", true);

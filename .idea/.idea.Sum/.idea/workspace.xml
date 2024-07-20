@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="" />
+    <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Ground/Dimsum/Ground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Bridge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Bridge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Sunglass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Sunglass.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/WhyDownSum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/WhyDownSum.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/UhBeeZZIBA-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/UhBeeZZIBA-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DownSum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DownSum.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/Bridge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/Bridge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/SunGlass.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/SunGlass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,38 +30,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2jCEXg5UJO2z6YwmtLwgCYKzZxk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CppCodeGenerationId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\basp4\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\basp4\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\basp4\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\money\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\money\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\money\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\basp4\Documents\GitHub\Sum -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\basp4\Documents\GitHub\Sum" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -52,7 +72,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\2021.3.16f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\basp4\Documents\GitHub\Sum -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\basp4\Documents\GitHub\Sum" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -89,6 +109,10 @@
       <option name="presentableId" value="Default" />
       <updated>1720882700733</updated>
       <workItem from="1720882705098" duration="595000" />
+      <workItem from="1721452365958" duration="1072000" />
+      <workItem from="1721453459119" duration="98000" />
+      <workItem from="1721453579789" duration="119000" />
+      <workItem from="1721453719152" duration="3054000" />
     </task>
     <servers />
   </component>
@@ -101,7 +125,12 @@
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
