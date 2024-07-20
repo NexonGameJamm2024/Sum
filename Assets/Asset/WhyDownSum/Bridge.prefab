@@ -218,3 +218,5 @@ MonoBehaviour:
     \uD558\uD558 \uD558 \uD558\uD558\uD558 \uD558 \uD558 \uD558 \uD558"
   speed: 1
   isColliderOn: 0
+  Duration: 7
+  Blinking: 0.2
