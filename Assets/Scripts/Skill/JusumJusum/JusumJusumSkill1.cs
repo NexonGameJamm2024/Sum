@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class JusumJusumSkill1 : MonoBehaviour
@@ -7,15 +8,23 @@ public class JusumJusumSkill1 : MonoBehaviour
     private int TrashCount;
     private bool isTrigger;
 
+
+    [SerializeField]
+    private int AllObstacleNum;
+
     private int breakIndex;
     private int JusumCount;
-    private Animator anim;
+
+    [SerializeField]
+    private TMP_Text countText;
 
     [SerializeField]
     private GameObject[] platform;
 
     [SerializeField]
     private GameObject board;
+
+    private Animator anim;
 
     // 현재 부딪힌 장애물 번호
     public int hitObstacleNumber;
@@ -50,6 +59,7 @@ public class JusumJusumSkill1 : MonoBehaviour
                 PlayerMovement.isGrounded = false;
             }
             TrashCount++;
+            JusumCount++;
         }
     }
     private int GetObstacleNumber(GameObject obstacle)
@@ -80,6 +90,12 @@ public class JusumJusumSkill1 : MonoBehaviour
     private void Update()
     {
         TrashCountCheck();
+        UpdateCountUI();
+    }
+
+    private void UpdateCountUI()
+    {
+        countText.text = JusumCount + " / " + AllObstacleNum;
     }
 
     private void TrashCountCheck()
@@ -89,6 +105,9 @@ public class JusumJusumSkill1 : MonoBehaviour
             TrashCount = 0;
             isTrigger = true;
             StartCoroutine(BreakPlatformCount(1.5f));
+
+            countText.gameObject.SetActive(true);
+            JusumCount = 0;
         }
     }
 
