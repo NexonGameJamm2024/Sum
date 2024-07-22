@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class Dimsum_Wall: MonoBehaviour
 {
-    public float speed;
-
-    private Rigidbody2D rb;
-    private Vector3 scale;
+    //private Rigidbody2D _rb;
+    private PolygonCollider2D _col;
+    private Transform _tf;
+        
+    [SerializeField] private float maxScale = 0.75f;
+    [SerializeField] private float Scale = 0.005f;
+    [SerializeField] private float Speed = 0.05f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        TryGetComponent(out _tf);
+        TryGetComponent(out _col);
+        //TryGetComponent(out _rb);
     }
 
     private void Update()
     {
-        if (gameObject.transform.localScale.x < 1f)
+        if (_tf.localScale.x < maxScale)
         {
-            gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x + 0.001f, gameObject.transform.localScale.y + 0.001f);
-            gameObject.transform.position = new Vector2(gameObject.transform.position.x + 0.003f, gameObject.transform.position.y);
+            _tf.localScale = new Vector2(_tf.localScale.x + Scale, _tf.localScale.y + Scale);
+            _tf.position = new Vector2(_tf.position.x + Speed, _tf.position.y);
         }
         else
         {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            _col.enabled = true;
+            //_rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 }

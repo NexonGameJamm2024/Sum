@@ -110,7 +110,7 @@ public class Dimsum_Skill1 : MonoBehaviour
         }
 
         PlayerMovement.isDrag = false;
-        rb.gravityScale = 1f;
+        rb.gravityScale = 1.5f;
         isFirst = false;
         Timer = 0f;
     }

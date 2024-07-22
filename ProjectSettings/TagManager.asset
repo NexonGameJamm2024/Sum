@@ -63,6 +63,9 @@ TagManager:
   - name: Sunglass
     uniqueID: 1504686179
     locked: 0
+  - name: Vomit
+    uniqueID: 2066146311
+    locked: 0
   - name: pause
     uniqueID: 3440797665
     locked: 0
