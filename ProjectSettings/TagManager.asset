@@ -8,6 +8,7 @@ TagManager:
   - Throw
   - End
   - Canvas
+  - Wall
   layers:
   - Default
   - TransparentFX

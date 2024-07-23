@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum_Platform.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum_Platform.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Skill1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Skill1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Font/UhBeeZZIBA-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Font/UhBeeZZIBA-Regular SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/steamproject/Sum/Assets/Asset/Dimsum/Dimsum.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WallLayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -109,7 +104,8 @@
       <workItem from="1721453459119" duration="98000" />
       <workItem from="1721453579789" duration="119000" />
       <workItem from="1721453719152" duration="7794000" />
-      <workItem from="1721659673770" duration="1399000" />
+      <workItem from="1721659673770" duration="1737000" />
+      <workItem from="1721744875515" duration="1710000" />
     </task>
     <servers />
   </component>
@@ -126,25 +122,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/Bridge.cs</url>
-          <line>76</line>
-          <properties documentPath="D:\steamproject\Sum\Assets\Scripts\Skill\WhyDownSum\Bridge.cs" initialLine="74" containingFunctionPresentation="메서드 'ChangeColor'">
-            <startOffsets>
-              <option value="2088" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2089" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
