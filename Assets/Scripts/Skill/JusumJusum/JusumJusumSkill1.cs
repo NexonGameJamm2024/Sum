@@ -26,10 +26,8 @@ public class JusumJusumSkill1 : MonoBehaviour
 
     private Animator anim;
 
-    // 현재 부딪힌 장애물 번호
     public int hitObstacleNumber;
 
-    // 장애물 배열
     private bool[] obstaclesHit = new bool[101];
 
     private void Start()
@@ -64,7 +62,6 @@ public class JusumJusumSkill1 : MonoBehaviour
     }
     private int GetObstacleNumber(GameObject obstacle)
     {
-        //===장애물의 이름에서 번호 추출===//
         string name = obstacle.name;
         if (int.TryParse(name.Split('_')[1], out int number))
         {

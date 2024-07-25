@@ -29,7 +29,6 @@ public class SpeechSystem : MonoBehaviour
 
     void ChangeText()
     {
-        //===0 이상 3 미만의 랜덤 정수 생성===//
         int randomIndex = Random.Range(0, 3);
 
         SpeechText.text = texts[randomIndex];
