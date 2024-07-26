@@ -4,59 +4,70 @@ using UnityEngine;
 
 public class RotateSquare : MonoBehaviour
 {
-    [SerializeField] private float rotationAngle = 90f;
+    [SerializeField] private float rotationSpeed = 90f;
     [SerializeField] private float delayTime = 3f;
+    [SerializeField] private GameObject rotationSquare; 
+    [SerializeField] private GameObject platform;
 
-    [SerializeField] private GameObject RaotationSquare;
-
-    private float currentAngle = 0f;
+    private float targetAngle;
+    private bool isPaused;
 
     void Start()
     {
-        RotationObj().Forget();
+        targetAngle = 0f;
+        isPaused = false;
+        Rotate().Forget();
     }
 
-    void Update()
+    async UniTaskVoid Rotate()
     {
-        CheckRotate();
-    }
-
-    private void CheckRotate()
-    {
-        float remainder = currentAngle % 360;
-        if (RaotationSquare.transform.eulerAngles.z == 90)
+        if (rotationSquare == null)
         {
-            Debug.Log("a");
+            Debug.LogWarning("할당 오류");
+            return;
         }
-    }
 
-    async UniTaskVoid RotationObj()
-    {
-        if (RaotationSquare != null)
+        while (true)
         {
-            while (true)
+            if (isPaused)
             {
-                float remainder = currentAngle % 360;
-                if (Mathf.Abs(remainder - 90) < 0.2f || Mathf.Abs(remainder - -90) < 0.2f ||
-                    Mathf.Abs(remainder - 180) < 0.2f || Mathf.Abs(remainder - -180) < 0.2f)
-                {
-                    RaotationSquare.transform.eulerAngles = new Vector3(0, 0, Mathf.Round(RaotationSquare.transform.eulerAngles.z / 90) * 90);
-                    await UniTask.Delay(TimeSpan.FromSeconds(delayTime));
+                await UniTask.Yield();
+                continue;
+            }
 
-                    currentAngle = 0;
+            float currentAngle = NormalizeAngle(rotationSquare.transform.eulerAngles.z);
+            float angleToTarget = Mathf.DeltaAngle(currentAngle, targetAngle);
+
+            if (Mathf.Abs(angleToTarget) < rotationSpeed * Time.deltaTime)
+            {
+                rotationSquare.transform.eulerAngles = new Vector3(0, 0, targetAngle);
+                if (Mathf.Approximately(targetAngle, 90f))
+                {
+                    platform.SetActive(false);   
                 }
                 else
                 {
-                    RaotationSquare.transform.Rotate(Vector3.forward, rotationAngle * Time.deltaTime);
-                    currentAngle += rotationAngle * Time.deltaTime;
-                    await UniTask.Yield();
+                    platform.SetActive(true);
                 }
+
+                isPaused = true;
+                await UniTask.Delay(TimeSpan.FromSeconds(delayTime));
+                targetAngle = (targetAngle + 90f) % 360f;
+                isPaused = false;
             }
-        }
-        else
-        {
-            Debug.LogWarning("할당 오류");
+            else
+            {
+                // 회전 계속
+                float step = rotationSpeed * Time.deltaTime;
+                rotationSquare.transform.Rotate(Vector3.forward, Mathf.Sign(angleToTarget) * step);
+            }
+
+            await UniTask.Yield();
         }
     }
 
+    private float NormalizeAngle(float angle)
+    {
+        return (angle + 360f) % 360f;
+    }
 }
