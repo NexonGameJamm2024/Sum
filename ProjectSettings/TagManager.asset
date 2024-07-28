@@ -9,6 +9,7 @@ TagManager:
   - End
   - Canvas
   - Wall
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Sunglass
   - Brigde
   - pause
-  - 
+  - Block
   - 
   - 
   - 
