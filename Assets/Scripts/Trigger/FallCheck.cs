@@ -1,17 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FallCheck : MonoBehaviour
 {
-    [SerializeField]
-    GameObject GameManager;
+    private GameManager _gm;
+
+    private void Start()
+    {
+        _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            GameManager.GetComponent<GameManager>().RestartScene();
+            _gm.RestartScene(GameManager.RestartType.Fall);
             SoundManager.instance.EffectSoundPlay((int)SoundManager.EffectType.Fall);
         }
     }

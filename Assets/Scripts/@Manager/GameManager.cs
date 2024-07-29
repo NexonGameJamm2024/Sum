@@ -14,23 +14,45 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     FadeController Fade;
 
+    
+    public enum RestartType
+    {
+        Fall,
+        Obstacle,
+        Button
+    }
     private void Update()
     {
         RestartButtom();
     }
+    
     public void RestartButtom()
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            RestartScene();
+            RestartScene(RestartType.Button);
         }
 
     }
 
-    public void RestartScene()
+    // ReSharper disable Unity.PerformanceAnalysis
+    public void RestartScene(RestartType type)
     {
         Fade.FadeOut();
-        Invoke("checkScene", 1f);
+
+        switch (type)
+        {
+            case RestartType.Fall :
+                Invoke("checkScene", 1f);
+                break;
+            case RestartType.Obstacle :
+                Invoke("ResetScene", 1f);
+                break;
+            default:
+                Invoke("ResetScene", 1f);
+                break;
+                    
+        }
     }
 
     private void checkScene()
@@ -57,6 +79,11 @@ public class GameManager : MonoBehaviour
             Player.GetComponent<DownSumMovement>().ResetValues(StartPoint.transform.position);
             Fade.FadeIn();
         }
+    }
+
+    private void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void NextScene()
     {

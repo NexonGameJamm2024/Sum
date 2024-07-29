@@ -68,6 +68,12 @@ TagManager:
   - name: Vomit
     uniqueID: 2066146311
     locked: 0
+  - name: Thorn
+    uniqueID: 321294549
+    locked: 0
   - name: pause
     uniqueID: 3440797665
+    locked: 0
+  - name: Fade
+    uniqueID: 2752004063
     locked: 0

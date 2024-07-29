@@ -6,15 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Sunglass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Sunglass.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Sunglass.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/Sunglass.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/WhyDownSum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/WhyDownSum.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/WhyDownSum.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/WhyDownSum/WhyDownSum.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Square.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Square.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DownSum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DownSum.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSum.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JuSum.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/@Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/@Manager/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/DownSumMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/DownSumMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/Ball.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/WhyDownSum/Ball.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Trigger/FallCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Trigger/FallCheck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +117,8 @@
       <workItem from="1721659673770" duration="1737000" />
       <workItem from="1721744875515" duration="1710000" />
       <workItem from="1722184437452" duration="3911000" />
+      <workItem from="1722193345732" duration="182000" />
+      <workItem from="1722274205382" duration="3203000" />
     </task>
     <servers />
   </component>

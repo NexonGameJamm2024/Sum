@@ -2623,6 +2623,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5836514054184292021, guid: 238694988f62af54ea72b649d7277d8d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1542963233
+      objectReference: {fileID: 0}
     - target: {fileID: 5836514054184292025, guid: 238694988f62af54ea72b649d7277d8d, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -4226,7 +4230,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -854169631
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 145e8711165aa2b45841b3a33f4bd686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

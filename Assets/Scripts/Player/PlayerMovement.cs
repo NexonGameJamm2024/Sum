@@ -17,7 +17,8 @@ public class PlayerMovement : MonoBehaviour
     public static bool isGrounded;
     private Rigidbody2D rb;
     private Animator anim;
-
+    public bool isDead = false;
+    
     private void Start()
     {
         TryGetComponent(out rb);
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isDrag)
+        if (!isDrag && !isDead)
         {
             Move();
         }
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!isDrag)
+        if (!isDrag && !isDead)
         {
             GroundCheck();
             Jump();

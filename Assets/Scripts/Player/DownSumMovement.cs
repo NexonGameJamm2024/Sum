@@ -17,6 +17,7 @@ public class DownSumMovement : MonoBehaviour
     private float _MoveSpeed;
     private float _jumpForce;
     private Animator bodyAnim;
+    public bool isDead = false;
 
     private bool isGrounded;
     private bool isMove;
@@ -34,13 +35,19 @@ public class DownSumMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
+        if (!isDead)
+        {
+            Move();
+        }
     }
 
     private void Update()
     {
-        GroundCheck();
-        Jump();
+        if (!isDead)
+        {
+            GroundCheck();
+            Jump();
+        }
     }
 
     private void Move()
