@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(isGrounded);
         if (!isDrag && !isDead)
         {
             GroundCheck();
@@ -134,5 +135,10 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isJump", false);
             currentState = "Idle";
         }
+    }
+
+    public void ChangeJumpForce(float value)
+    {
+        _jumpForce = value;
     }
 }

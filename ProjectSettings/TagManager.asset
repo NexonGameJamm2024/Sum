@@ -10,6 +10,7 @@ TagManager:
   - Canvas
   - Wall
   - Block
+  - Jelly
   layers:
   - Default
   - TransparentFX
