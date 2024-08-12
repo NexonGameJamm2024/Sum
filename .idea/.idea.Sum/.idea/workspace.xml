@@ -6,19 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Dimsum/DimsumController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Controllers/Dimsum/DimsumController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Jusum/JuSumController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Controllers/Jusum/JuSumController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/JuSumStage3/Jelly.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/JuSumStage3/Jelly.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/JuSumStage3/SizeDownJelly.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/JuSumStage3/SizeDownJelly.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/JuSumStage3/SizeUpJelly.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/JuSumStage3/SizeUpJelly.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSumStage3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JuSumStage3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/JuSumSizeUp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/JuSumSizeUp.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stage/Block/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stage/Block/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stage/Stage3/JellySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stage/Stage3/JellySpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum_Vomit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum_Vomit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Ball.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Ball.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Square.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Square.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSum.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSum.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSumStage3.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSumStage3.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Ground.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Ground.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Trash.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Trash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YSCHOI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YSCHOI/Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/YSCHOI/Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +42,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/Block/Block.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/Stage3/In_Trigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/MakeBridge.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/WhySumActiveTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/WhySum_Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WallLayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@cdf88c6a6a/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -128,6 +142,7 @@
       <workItem from="1723038943341" duration="1048000" />
       <workItem from="1723460245223" duration="4321000" />
       <workItem from="1723465487761" duration="6571000" />
+      <workItem from="1723473730527" duration="5840000" />
     </task>
     <servers />
   </component>
@@ -144,6 +159,25 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/Jusum_Stage5.cs</url>
+          <line>41</line>
+          <properties documentPath="D:\steamproject\Sum\Assets\Scripts\Stage\JuSumStage5\Jusum_Stage5.cs" initialLine="35" containingFunctionPresentation="메서드 'OnCollisionEnter2D'">
+            <startOffsets>
+              <option value="1138" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1139" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 6bbe03babd0ff7b49ba07b74ba6cc56e
   - enabled: 1
-    path: Assets/Scenes/Dimsum.unity
+    path: Assets/Scenes/DimsumStage/Dimsum.unity
     guid: 715a57dc2baa1b94ea829bff3e22871d
   - enabled: 1
-    path: Assets/Scenes/JuSum.unity
+    path: Assets/Scenes/JuSumStage/JuSum.unity
     guid: b85bfcd176bb6f645a11dc3d0793168c
   - enabled: 1
     path: Assets/Scenes/DownSum.unity

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4819454717504385621}
   - component: {fileID: -3033167114344946538}
   m_Layer: 3
-  m_Name: Dimsum_Vomit
+  m_Name: Dimsum_Bridge_Vomit
   m_TagString: Throw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9a265cf08d8162646a8ee76be8b9b4f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4.59, y: 1.08}
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf13eaa632e331f438bab14428ea03ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 1
+  direction: 0
   maxScale: 0.75
   Scale: 0.005
-  Speed: 0.0225
+  Speed: 0.0175
 --- !u!60 &-3033167114344946538
 PolygonCollider2D:
   m_ObjectHideFlags: 0
