@@ -36,10 +36,10 @@ public class JellySpawnManager : MonoBehaviour
     
     async UniTask Spawn(float time)
     {
-        for (int i = 0; i < spawnCount; i++) //count만큼 책 생성
+        for (int i = 0; i < spawnCount; i++)
         {
             Vector2 spawnPos = GetRandomPosition(); //랜덤 위치 return
-            int jellyNum = Random.Range(0, 3); 
+            int jellyNum = Random.Range(0, 4); 
             
             //원본, 위치, 회전값을 매개변수로 받아 오브젝트 복제
             GameObject instance = Instantiate(jelly[jellyNum], spawnPos, Quaternion.identity);

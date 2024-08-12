@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-using System;
 using Cysharp.Threading.Tasks;
 
 public class Ball : MonoBehaviour
