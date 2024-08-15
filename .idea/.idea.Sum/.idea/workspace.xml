@@ -6,31 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Dimsum/DimsumController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Controllers/Dimsum/DimsumController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Controllers/Jusum/JuSumController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Controllers/Jusum/JuSumController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum_Vomit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asset/Dimsum/Dimsum_Vomit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Ball.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Ball.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Square.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Asset/Stage/Block/Square.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dimsum.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSum.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSum.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSumStage3.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSumStage3.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/Dimsum/Dimsum_Wall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Ground.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Ground.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Trash.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/JusumJusum/Trash.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YSCHOI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YSCHOI/Test.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YSCHOI/Test.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +17,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/DimSumStage1/Door.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/DimSumStage1/Pot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/DimSumStage1/PotTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/DimSumStage1/Vegatable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/DimSumStage2/MovablePlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/MakeBridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/WhySumActiveTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage/JuSumStage5/WhySum_Obstacle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -143,6 +123,8 @@
       <workItem from="1723460245223" duration="4321000" />
       <workItem from="1723465487761" duration="6571000" />
       <workItem from="1723473730527" duration="5840000" />
+      <workItem from="1723712653793" duration="1272000" />
+      <workItem from="1723715865058" duration="7641000" />
     </task>
     <servers />
   </component>

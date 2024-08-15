@@ -12,6 +12,8 @@ TagManager:
   - Block
   - Jelly
   - Text
+  - Fire
+  - Vegatable
   layers:
   - Default
   - TransparentFX
