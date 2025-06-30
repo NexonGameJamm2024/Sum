@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6c1a15db-503a-4a69-91e0-f3580d813247" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sum/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DimsumStage/DimSumStage2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DimsumStage/DimSumStage2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/JuSumStage/JuSumStage3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/JuSumStage/JuSumStage3.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +126,8 @@
       <workItem from="1723473730527" duration="5840000" />
       <workItem from="1723712653793" duration="1272000" />
       <workItem from="1723715865058" duration="7641000" />
+      <workItem from="1723732033432" duration="1054000" />
+      <workItem from="1724793254815" duration="844000" />
     </task>
     <servers />
   </component>
